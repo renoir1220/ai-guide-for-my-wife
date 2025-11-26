@@ -20,8 +20,10 @@ export const docs = defineDocs({
   },
 });
 
+import { remarkMermaid } from './lib/remark-mermaid';
+
 export default defineConfig({
   mdxOptions: {
-    // MDX options
+    remarkPlugins: [remarkMermaid],
   },
 });
